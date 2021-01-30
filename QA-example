@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+void hesapla(int sayi1){
+    int i=0;
+    int max=0;
+    int sonuc=0;
+    int sondeger=0;
+    int result=0;
+    for(i ; i<=sayi1 ; i++){
+        sonuc = i *i;
+        if(sonuc > sayi1){
+           sondeger = i-1;
+                break;   
+        }
+    }
+   result = sayi1 - (sondeger*sondeger);
+    printf("%d \n", sondeger*sondeger);
+    if(result >1){
+       hesapla(result);  
+    }
+}
+int main()
+{
+  int n;
+    printf("Input\n");
+  scanf("%d", &n);
+ printf("Output \n");
+  hesapla(n);
+  printf("1");
+  
+}
